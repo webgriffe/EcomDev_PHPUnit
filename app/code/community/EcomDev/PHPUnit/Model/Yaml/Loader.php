@@ -16,10 +16,6 @@
  * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
  */
 
-// Loading Spyc yaml parser,
-// because Symfony component is not working properly with nested structures
-require_once 'Spyc/spyc.php';
-
 class EcomDev_PHPUnit_Model_Yaml_Loader
 {
     const XML_PATH_YAML_FILE_LOADERS = 'phpunit/suite/yaml/loaders';
@@ -109,6 +105,6 @@ class EcomDev_PHPUnit_Model_Yaml_Loader
      */
     public function load($filePath)
     {
-        return Spyc::YAMLLoad($filePath);
+        return \Symfony\Component\Yaml\Yaml::parse(file_get_contents($filePath));
     }
 }

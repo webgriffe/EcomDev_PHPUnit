@@ -6,7 +6,8 @@
     "homepage": "http://www.ecomdev.org/shop/code-testing/php-unit-test-suite.html",
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
-        "phpunit/phpunit": "4.1.*"
+        "phpunit/phpunit": "^9.5",
+        "symfony/yaml": "^3.0 || ^4.0"
     },
     "replace": {
         "ivanchepurnyi/ecomdev_phpunit":"*"
@@ -15,5 +16,13 @@
         {
             "name":"Ivan Chepurnyi"
         }
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "magento-hackathon/magento-composer-installer": true
+        }
+    },
+    "extra": {
+        "magento-root-dir": "root"
+    }
 }
