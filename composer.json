@@ -7,7 +7,7 @@
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
         "phpunit/phpunit": "^9.5",
-        "symfony/yaml": "^6.0"
+        "symfony/yaml": "^5.0"
     },
     "replace": {
         "ivanchepurnyi/ecomdev_phpunit":"*"
